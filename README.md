@@ -25,3 +25,5 @@ How to Use?
 - Open 'backend' and start server using 'node index.js'
 - Open 'MerchantSideApp' and run it on an android device (not emulator) using 'npm start'
 - Now everything must be working
+
+
