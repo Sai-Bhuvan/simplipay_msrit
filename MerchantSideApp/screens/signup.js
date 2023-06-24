@@ -25,21 +25,21 @@ export default function Signup({ onPageChange }) {
 
   const [permission, requestPermission] = Camera.useCameraPermissions();
 
-    if (!permission) {
-        // Camera permissions are still loading
-        return <View />;
-    }
+  if (!permission) {
+    // Camera permissions are still loading
+    return <View />;
+  }
 
-    if (!permission.granted) {
-        // Camera permissions are not granted yet
-        return (
-            <View style={global.screen}>
-                <Text style={{ textAlign: 'center' }}>We need your permission to show the camera</Text>
-                <Button onPress={requestPermission} title="grant permission" />
-            </View>
-        );
-        // requestPermission();
-    }
+  if (!permission.granted) {
+    // Camera permissions are not granted yet
+    return (
+      <View style={global.screen}>
+        <Text style={{ textAlign: 'center' }}>We need your permission to show the camera</Text>
+        <Button onPress={requestPermission} title="grant permission" />
+      </View>
+    );
+    // requestPermission();
+  }
 
 
 
@@ -84,7 +84,7 @@ export default function Signup({ onPageChange }) {
 
       );
 
-      // console.log(res);
+      console.log(res);
       await AsyncStorage.setItem('phone', phoneno);
       if (res.status == 201) {
         res = await res.json();

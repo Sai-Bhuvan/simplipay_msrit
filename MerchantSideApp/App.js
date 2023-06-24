@@ -8,6 +8,7 @@ import HomePage from './screens/HomePage';
 import { useState } from 'react';
 import { View } from 'react-native';
 
+import { EvaIconsPack } from '@ui-kitten/eva-icons';
 
 
 export default function App() {
@@ -30,7 +31,7 @@ export default function App() {
     }
   }
   return (
-    <ApplicationProvider {...eva} theme={eva.dark}>
+    <ApplicationProvider icons={EvaIconsPack} {...eva} theme={eva.dark}>
      
       <View style = {{flex: 1, }}>
         {renderPage()}

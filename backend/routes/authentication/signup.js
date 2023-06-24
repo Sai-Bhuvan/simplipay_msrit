@@ -69,6 +69,7 @@ router.post("/sign-up", async (req, res) => {
         console.log(registered);
         res.status(201).json({phoneNo: req.body.phoneno, isMerchant: req.body.isMerchant, statusCode: 201});
     } catch (err) {
+        console.log(err);
         res.status(400).json(err);
     }
 });
